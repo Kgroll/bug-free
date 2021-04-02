@@ -15,7 +15,8 @@ The regex I am describing is for creating and validating a strong password by me
 - must include at least one digit
 - must include at least one special character
 
-/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,21}$/
+
+`/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,21}$/`
 
 
 ## Table of Contents
