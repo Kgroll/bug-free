@@ -14,7 +14,7 @@ The regex I am describing is for creating and validating a strong password by me
 - must include at least one upper case letter
 - must include at least one lower case letter
 - must include at least one digit
-- must include at least one special characte
+- must include at least one special character
 
 
 ## Table of Contents
@@ -24,7 +24,7 @@ The regex I am describing is for creating and validating a strong password by me
 - [Character Classes](#character-classes)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Lazy Match](#lazy-match
+- [Lazy Match](#lazy-match)
 - [Look-ahead and Look-behind](#look-ahead-and-Look-behind)
 - [Examples of Password Matches](#examples-of-password-matches)
 
