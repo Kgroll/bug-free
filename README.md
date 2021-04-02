@@ -14,9 +14,7 @@ The regex I am describing is for creating and validating a strong password by me
 - must include at least one upper case letter
 - must include at least one lower case letter
 - must include at least one digit
-- must include at least one special character
-
-`/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,21}$/`
+- must include at least one special characte
 
 
 ## Table of Contents
@@ -31,6 +29,8 @@ The regex I am describing is for creating and validating a strong password by me
 - [Examples of Password Matches](#examples-of-password-matches)
 
 ## Regex Components
+`/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,21}$/`
+
 
 ### Anchors
 An Anchor is a token that does not match any character but rather matches a particular position within the regex.  
