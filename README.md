@@ -29,8 +29,19 @@ The regex I am describing is for creating and validating a strong password by me
 - [Examples of Password Matches](#examples-of-password-matches)
 
 ## Regex Components
-`/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,21}$/`
+`/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,20}$/`   
 
+Simple Explanation of the regex  
+`/`Beginning of the paragraph   
+`^`Beginning of the string  
+`(?=.*?[A-Z])`Look-ahead and assess for at least one upper case character   
+`(?=.*?[a-z)`Look-ahead and assess for at least one lower case character    
+`(?=.*?[0-9])`Look-ahead and assess for at least one digit  
+`(?=.*?[#?!@$ %^&*-:()])` Look-ahead and assess for at least one special character  
+`.`Matches any character  
+`{8,21}`Ensure the password is a minimum of 8 and a maximum of 20 characters long  
+`$`End of the string  
+`/`End of the paragraph
 
 ### Anchors
 An Anchor is a token that does not match any character but rather matches a particular position within the regex.  
@@ -70,7 +81,7 @@ Grouping and capturing refers to the section of the regular expression enclosed 
 `[]` Are used to define a character class.   
 `()` Parentheses are used to place a particular part of a regex in order so they can group that part of the regex together,   
    this also captures the information within the parentheses.   
-`(?=.*?[#?!@$ %^&*-:()]).{8,21}` If we break down this snippet we cand see that the curly braces enclose the required minimum and maximum length of the password,  
+`(?=.*?[#?!@$ %^&*-:()]).{8,20}` If we break down this snippet we cand see that the curly braces enclose the required minimum and maximum length of the password,  
     the square braces enclose the list of characters that are allowed, in  this case the list is of special characters, and the parentheses enclose  
     the entire definition of that particular grouping.
 
