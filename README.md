@@ -26,7 +26,7 @@ The regex I am describing is for creating and validating a strong password by me
 - [Bracket Expressions](#bracket-expressions)
 - [Lazy Match](#lazy-match)
 - [Look-ahead and Look-behind](#look-ahead-and-Look-behind)
-- [Examples of Password Matches](#examples-of-password-matches)
+- [Examples of Password Checks](#examples-of-password-checks)
 
 ## Regex Components
 `/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,20}$/`   
@@ -57,8 +57,8 @@ An Anchor is a token that does not match any character but rather matches a part
 Quantifier originates from the latin quantas meaning how much/how often. In regex it indicates the number of characters or expressions required to match the required input.  
 `*` Assesses the preceding tokens to match 0 or more of the criteria.   
 `(?=.*?[A-Z])` in this snippet of code the `*` is letting us assess if any upper case letters have been entered.   
-`{}` Matches the number of characters in the preceding tokens necessary to validates the input data.  
-`{8,21}` In this snippet the quantifier is stating there must be a minimum of 8 characters and a maximum of 21 characters for the password to be validated.    
+`{}` Matches the number of characters in the preceding tokens necessary to validate the input data.  
+`{8,20}` In this snippet the quantifier is stating there must be a minimum of 8 characters and a maximum of 21 characters for the password to be validated.    
 
 ### Character Classes
 Character classes refer to the set of characters which can occur in an input string in order for a match to succeed.  
@@ -87,23 +87,29 @@ Grouping and capturing refers to the section of the regular expression enclosed 
 
 ### Lazy Match
 Lazy match is defined as finding as few matches as possible. The opposte of lazy match is greedy which is defined as eating up as many tokens as possible.  
-`?` Denotes the lazy match allowing the preceding quantifier, in this case *, to match as few characters as possible.   
+`?` Denotes the lazy match allowing the preceding quantifier to match as few characters as possible.   
 `*?` In this snippet the lazy match is referring to the `*` quantifier which is searching for 0 or more matches.  
 
 ### Look-ahead and Look-behind
 `(?=)` This refers to Look-ahead and allows a search for the character or characters in that particular group or class,   
        if the character is present then the regex recognizes the match and if it is not it rejects it.  
  `(?=.*?[a-z])` This snippet is Looking-ahead in order to determine if any lower case characters have been entered in order to pass the validation.  
- `(?<=)` This refers to Look-behind and assesses the input already entered. This could also be used however it is not recognized in all languages so it has been not included it in my regex.  
-
-## Examples of Password Matches
-Pass: iLuvCh0c0latEcake:)!!
+ `(?<=)` This refers to Look-behind and assesses the input already entered. This could also be used, however it is not recognized in all languages so it has been not included it in my regex.  
 
 ## Examples of Password Checks
-Pass: iLuvCh0c0latEcake:)!!
-_contains 8 to 20 charactersδ_
+Pass: iLuvCh0c0latEcake:)!!  
+_contains 8 to 20 characters ✓_   
+_contains at least one upper case letter ✓_    
+_contains at least one lower case letter ✓_    
+_contains at least one digit ✓_   
+_contains at least one special character ✓_   
 
-Fail: idontlUvCh0c0latEcake:(!!
+Fail: idontlUvChOcOlatEcake:(!!  
+_contains 8 to 20 characters ✗_   
+_contains at least one upper case letter ✓_   
+_contains at least one lower case letter ✓_   
+_contains at least one digit ✗_   
+_contains at least one special character ✓_   
 
 ## Author
 Created by Kristen Groller  
