@@ -99,6 +99,10 @@ Lazy match is defined as finding as few matches as possible. The opposte of lazy
 ## Examples of Password Matches
 Pass: iLuvCh0c0latEcake:)!!
 
+## Examples of Password Checks
+Pass: iLuvCh0c0latEcake:)!!
+_contains 8 to 20 charactersδ_
+
 Fail: idontlUvCh0c0latEcake:(!!
 
 ## Author
