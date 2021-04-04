@@ -27,6 +27,7 @@ The regex I am describing is for creating and validating a strong password by me
 - [Lazy Match](#lazy-match)
 - [Look-ahead and Look-behind](#look-ahead-and-Look-behind)
 - [Examples of Password Checks](#examples-of-password-checks)
+- [Author](#author)
 
 ## Regex Components
 `/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-:()]).{8,20}$/`   
@@ -81,7 +82,7 @@ Grouping and capturing refers to the section of the regular expression enclosed 
 `[]` Are used to define a character class.   
 `()` Parentheses are used to place a particular part of a regex in order so they can group that part of the regex together,   
    this also captures the information within the parentheses.   
-`(?=.*?[#?!@$ %^&*-:()]).{8,20}` If we break down this snippet we cand see that the curly braces enclose the required minimum and maximum length of the password,  
+`(?=.*?[#?!@$ %^&*-:()]).{8,20}` If we break down this snippet we can see that the curly braces enclose the required minimum and maximum length of the password,  
     the square braces enclose the list of characters that are allowed, in  this case the list is of special characters, and the parentheses enclose  
     the entire definition of that particular grouping.
 
